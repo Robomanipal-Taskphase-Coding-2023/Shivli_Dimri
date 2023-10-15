@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std; 
+int summ(int number) {
+    if (number == 0) {
+        return 0;
+    }
+    return (number % 10) + summ(number / 10);
+}
+int main() {
+    int number;
+    cout << "enter number ";
+    cin >> number;
+    int sum = summ(number);
+    cout << "sum of enetered digits is " << sum << endl;
+    return 0;
+}
