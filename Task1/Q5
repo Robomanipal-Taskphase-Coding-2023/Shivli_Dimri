@@ -1,0 +1,30 @@
+nclude <iostream>
+using namespace std;
+
+int main() {
+	int a, b, suma{}, sumb{};
+
+	cout << "the two numbers are :";
+
+	cin >> a >> b;
+
+	for (int i = 1; i < a; i++) {
+		if (a % i == 0) {
+			suma = suma + i;
+		}
+	}
+
+	for (int i = 1; i < b; i++) {
+		if (b % i == 0) {
+			sumb = sumb + i;
+		}
+	}
+
+	if (suma == b && sumb == a) {
+		cout << "They are amicable number\n";
+	}
+	else
+		cout << "They are not amicable";
+
+
+}
