@@ -1,0 +1,18 @@
+ #include <iostream>
+
+using namespace std; 
+int fact(int n){
+//to stop the loop from looping beyond 1
+    if(n<=1){
+    return 1; 
+}
+    return n*fact(n-1);
+}
+
+int main(){
+    int n,a; 
+
+
+cin>>a;
+cout<<fact(a)<<endl;
+}
