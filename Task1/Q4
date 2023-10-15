@@ -1,0 +1,43 @@
+#include <iostream>
+
+//array declare for number 
+
+using namespace std; 
+int main(){
+int n;
+int number[10];
+    cout<<"enter array length ";
+    cin>>n;
+    cout<<"enter number to be checked (press enter after each) ";
+
+    //for inputing array indices elements
+    for(int i =0; i<n; i++){
+    cin>>number[i];
+            }
+    
+    cout<<"the number is : ";
+
+    //for printing output 
+    for(int i =0; i<n; i++){
+        cout<<number[i]<<" ";
+    }
+    
+    //for checking hill number or not
+        
+    for(int i =0; i<n; i++){
+            if(number[i]<number[i+1]){
+           }
+           else{
+            for(int t =i+1 ; t<n; t++){
+               
+                if(number[t]>number[t+1]){
+                cout<<"\n"<<"entered number is a hill number";
+                exit(0);
+            }
+        
+        }
+    }
+
+    }
+ cout<<"entered number is not a hill number";
+}
