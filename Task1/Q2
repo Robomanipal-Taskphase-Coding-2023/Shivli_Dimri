@@ -1,0 +1,97 @@
+#include <iostream>
+
+using namespace std; 
+
+int main(){
+
+    int R1,C1, R2, C2,i,j,k;
+
+    cout<<"enter number of rows for matrix 1 "<<endl;
+    cin>>R1;
+    cout<<"enter number of columns for matrix 1 "<<endl;
+    cin>>C1;
+
+    int matA [R1][C1];
+
+    for(int i =0; i<R1; i++){
+        for(int j =0;j<C1; j++){
+            cout<<"enter element "<<i<<","<<j<<" ";
+            cin>>matA[i][j];
+        }
+        
+    }
+       for(int i =0; i<R1; i++){
+        for(int j =0;j<C1; j++){
+          cout<<" "<<matA[i][j];
+        }
+        cout<<endl;
+    }
+
+    
+cout<<"enter number of rows of matrix 2 "<<endl;
+    cin>>R2;
+    cout<<"enter number of columns of matrix 2 "<<endl;
+    cin>>C2;
+
+    int matB [R2][C2];
+
+    for(int i =0; i<R2; i++){
+        for(int j =0;j<C2; j++){
+            cout<<"enter element "<<i<<","<<j<<" ";
+            cin>>matB[i][j];
+        }
+        
+    }
+       for(int i =0; i<R2; i++){
+        for(int j =0;j<C2; j++){
+          cout<<" "<<matB[i][j];
+        }
+        cout<<endl;
+    }
+
+    if(C1!=R2){
+        cout<<"Matrices cannot be multiplied";
+        exit(0);
+    }
+
+    else{
+             int mult[C1][R2];
+     
+       for(int i =0; i<C1; i++){
+        for (int j =0; j<R2; j++){
+            mult[i][j] =0; 
+        }
+       }
+
+       //for multiplication
+       // Initializing elements of matrix mult to 0.
+    for(int i = 0; i < R1; i++){
+        for(int j = 0; j < C2; j++){
+        
+            mult[i][j]=0;
+        }
+    }
+
+
+    for(int i = 0; i < R1; i++){
+        for(int j = 0; j < C2; j++){
+            for(k = 0; k < C1; k++){
+            
+                mult[i][j] += matA[i][k] * matB[k][j];
+            }
+            }
+        }
+
+    cout << endl << "Product Matrix: " << endl;
+    for(int i = 0; i < R1; i++){
+    for(int j = 0; j < C2; j++)
+    {
+        cout << " " << mult[i][j];
+        if(j == C2-1)
+            cout << endl;
+    }
+    }
+
+    return 0;
+}
+}
