@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+ 
+int bubble(int a[], int n)
+{
+  int temp,i;
+    if (n == 1)
+        return n;
+    for (i = 0; i < n - 1; i++)
+        if (a[i] > a[i + 1])
+          {temp=a[i];
+          a[i]=a[i+1];
+          a[i+1]=temp;}
+    bubble(a, n - 1);
+}
+int main()
+{
+  int a[100],n,i;
+  cout<<"enter number of elements";
+  cin>>n;
+  for (i = 0; i < n; i++)
+        {cout<<"Enter element: ";
+        cin>>a[i];}
+  cout<<"\n";
+  bubble(a, n);
+  cout<<"Sorted array : \n";
+  for (i = 0; i < n; i++)
+      cout<<a[i]<<"\t";
+  cout<<"\n";
+  return 0;
+}
