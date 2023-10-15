@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+
+using namespace std; 
+
+int main(){
+
+string name1;
+cout<<"enter string 1 : ";
+cin>>name1;
+string &name2 = name1;
+cout<<"string 2 is : "<<name2;
+
+    return 0;
+}
