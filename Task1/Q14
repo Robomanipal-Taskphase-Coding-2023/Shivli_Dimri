@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int eucl(int a, int b) {
+    if (b == 0)
+        return a;
+    else
+        return eucl(b, a % b);
+}
+
+
+int main() {
+    int a, b;
+    cout<< "first number ";
+    cin>> a;
+    cout<< "second number ";
+    cin>> b;
+    cout << "greatest common divisor of " << a << " and " << b << " is " << eucl(a, b);
+  
+}
