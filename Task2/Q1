@@ -1,0 +1,10 @@
+print("enter num1 : ",end="")
+n = int(input())
+print("enter num2 : ",end="")
+m = int(input())
+print("enter num3 : ",end="")
+l = int(input())
+
+temp = max (n,m)
+print("max number out of the three entered is : ", end="")
+print(max(temp,l), end="")
