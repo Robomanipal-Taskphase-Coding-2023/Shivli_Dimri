@@ -1,0 +1,16 @@
+new_list =[]
+print("enter list size : ")
+
+size = int(input(len(new_list)))
+
+print('enter list elements : ')
+
+for i in range (size):
+    enteries = int(input())
+    new_list.append(enteries)
+
+print("list is :", new_list)
+
+new_list.sort()
+new_list.reverse()
+print("Second largest element in provided list is :",new_list[1])
