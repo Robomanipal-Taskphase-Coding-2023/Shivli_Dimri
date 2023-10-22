@@ -1,0 +1,14 @@
+from math import*
+
+print("enter x1 : ")
+x1 = int(input())
+print("enter x2 : ")
+x2 = int(input())
+print("enter y1 : ")
+y1 = int(input())
+print("enter y2 : ")
+y2 = int(input())
+coordinate1 = (x1,y1)
+coordinate2 = (x2,y2)
+
+print (sqrt(((x1-x2)**2)+((y1-y2)**2)))
