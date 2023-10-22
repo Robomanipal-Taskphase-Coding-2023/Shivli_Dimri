@@ -1,0 +1,23 @@
+
+
+yeah = (input())
+n = (len(yeah))
+yeah = ''.join(sorted(yeah))
+
+
+i =0
+while i < n-1:
+    if yeah [i] == yeah[i+1] : 
+        count =1   #count---> repeated occurences counted
+        while i+1<n and yeah [i] == yeah[i+1]:
+                 count += 1
+                 i+=1
+        print(f'{yeah[i]}{count}',end='')
+    else:
+        print(f'{yeah[i]}1',end='')
+    i+=1
+#last n
+if i == n-1 :
+    print(f'{yeah[i]}1', end='')
+
+    i+=1  
