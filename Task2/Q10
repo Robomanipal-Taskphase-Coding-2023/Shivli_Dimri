@@ -1,0 +1,26 @@
+input_code = str(input())
+n = len(input_code)
+#Shivli0000dimri0000456
+dict={}
+i=0
+while i<n :
+    if input_code[i] == '0':
+           dict ['first name'] = input_code[0:i]
+           break
+ 
+    
+    i+=1
+for j in range (i,n):
+          if input_code[j+1] != '0' :
+                for k in range (j+1,n):
+                       if input_code[k] == '0' :
+                              dict ['last name'] = input_code[j+1:k]
+                              for t in range (k,n):
+                                     if input_code[t+1] != '0':
+                                            dict['ID'] = input_code[t+1:n]
+                                            print(dict)
+                                            break
+                              break
+                break
+        
+      
