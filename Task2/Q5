@@ -3,12 +3,11 @@ def deci_to_bin(number) :
     if number ==0:
         return '0'
     
-    quotient, remainder = divmod(number,2)
+    (quotient, remainder) = divmod(number,2) 
     
     
     binary_conversion = deci_to_bin(quotient) + str(remainder)
     return binary_conversion
    
 number = int(input("enter decimal number : "))
-binary_str = deci_to_bin(number)
-print(binary_str)
+print(deci_to_bin(number))
