@@ -46,10 +46,12 @@ class laboratory :
             if to_be_added == self.item_info[0]:
                 self.item_info[1] = self.item_info[1]+ how_much  # Increase the quantity of the existing item
                 print('new list is : ',self.L)
+                break
+                
                 
             else:
               print('Item does not exist.')
-        
+       
 
     def delete_items(self):
         to_be_deleted = str(input('item to be deleted : '))
@@ -57,15 +59,16 @@ class laboratory :
         for self.item_info in self.L:
             if to_be_deleted == self.item_info[0]:
                 self.item_info[1] = self.item_info[1]- how_much_del  # decrease the quantity of the existing item
-            
+                print('new list is : ',self.L)
+                break
                 
             else:
                 print('Item does not exist.')
-        print('new list is : ',self.L)
+        
 
        
     
         
 
 
-lab = laboratory()  # you need to create an instance objectof the provided classr
+lab = laboratory()  # you need to create an instance (object) of the provided classr
