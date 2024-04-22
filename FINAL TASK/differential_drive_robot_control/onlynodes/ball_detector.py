@@ -11,15 +11,15 @@ class BallDetector:
         self.bridge = CvBridge()
         self.image_sub = rospy.Subscriber("/camera/image_raw", Image, self.image_callback)
         self.image_pub = rospy.Publisher("processed_image", Image, queue_size=1)
-        self.padding = 100 # Adjust padding for bounding box
+        self.padding = 100
         self.silo_threshold = 10
-        self.radius_threshold = 4 # Adjust based on your specific setup
-        self.min_circle_count_for_silo = 10  # Minimum number of circles in a cluster to be considered as a silo
+        self.radius_threshold = 4 
+        self.min_circle_count_for_silo = 10 
 
 
     def cluster_circles(self, circles, min_dist):
         clusters = []
-        cluster_sizes = []  # Keep track of the number of circles in each cluster
+        cluster_sizes = [] 
         for i in range(len(circles)):
             cluster_found = False
             for j, cluster in enumerate(clusters):
@@ -103,9 +103,9 @@ class BallDetector:
     #            max_y = max(i[1] for i in cluster) + self.padding
     #            cv2.rectangle(cv_image, (min_x, min_y), (max_x, max_y), (0, 255, 0), 2)
     #            cv2.putText(cv_image, "Silo", (min_x, min_y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-    #         # Stop processing further clusters if a silo is detected
+    #         
     #            break
-    # # If no silo is detected, treat all clusters as individual balls
+    # 
     #     if not silo_detected:
     #         for cluster in clusters:
     #             for circle in cluster:
