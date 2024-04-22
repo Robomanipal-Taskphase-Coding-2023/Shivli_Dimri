@@ -1,0 +1,1364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="areaurdf_noarea1">
+
+
+
+
+
+
+
+
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.25 -1.69475467221629E-15 5"
+        rpy="0 0 0" />
+      <mass
+        value="300" />
+      <inertia
+        ixx="401.5625"
+        ixy="2.29789624476107E-15"
+        ixz="-1.45077222109846E-15"
+        iyy="402.25"
+        iyz="-2.08654509120365E-13"
+        izz="3.8125" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="l3">
+    <inertial>
+      <origin
+        xyz="0.0659132786861086 0.017846055913745 0.341576441315705"
+        rpy="0 0 0" />
+      <mass
+        value="5591.38461642368" />
+      <inertia
+        ixx="75884.9056933627"
+        ixy="0.260769599932533"
+        ixz="0.190528362739135"
+        iyy="7368.87173400722"
+        iyz="-28.4914129480721"
+        izz="68536.2903750166" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.882352941176471 0.901960784313726 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l3.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+
+
+
+
+  <!-- Define the joint between the ball link and the base link -->
+<joint name="ball_joint1" type="fixed">
+  <!-- Specify the origin of the joint -->
+  <origin xyz="1.09038 0.847497 0.755788" />
+  <!-- Connect the ball link to the base link -->
+  <parent link="base_link"/>
+  <child link="ball1"/>
+</joint>
+
+<!-- Define the ball link -->
+<link name="ball1">
+  <!-- Define the ball visual -->
+  <visual>
+    <origin xyz="-0.794951806922509 3.3 -5.5" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Diameter: 190 mm / 2 = 0.095 meters -->
+    </geometry>
+    <material name="red"> <!-- Assuming red color -->
+      <color rgba="1 0 0 1" /> <!-- Red color -->
+    </material>
+  </visual>
+  <!-- Define the ball collision -->
+  <collision>
+    <origin xyz="-0.794951806922509 3.3 -5.5" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Same diameter as visual -->
+    </geometry>
+  </collision>
+  <!-- Define the ball inertia -->
+
+  <inertial>
+    <origin xyz="1.09038 0.847497 0.755788" /> <!-- Position of the ball -->
+    <mass value="0.325" /> <!-- Assuming the weight is 325 grams -->
+    <inertia ixx="0.004" ixy="0" ixz="0" iyy="0.004" iyz="0" izz="0.004" />
+    <!-- <inertia ixx="0.004" iyy="0.004" izz="0.004" /> Assuming spherical inertia -->
+  </inertial>
+  
+</link>
+
+
+
+
+
+
+
+
+<!-- Define the joint between the ball link and the base link -->
+<joint name="ball_joint2" type="fixed">
+  <!-- Specify the origin of the joint -->
+  <origin xyz="1.09038 0.847497 0.755788" />
+  <!-- Connect the ball link to the base link -->
+  <parent link="base_link"/>
+  <child link="ball2"/>
+</joint>
+
+<!-- Define the ball link -->
+<link name="ball2">
+  <!-- Define the ball visual -->
+  <visual>
+    <origin xyz="-0.794951806922509 3.49 -5.5" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Diameter: 190 mm / 2 = 0.095 meters -->
+    </geometry>
+    <material name="red"> <!-- Assuming red color -->
+      <color rgba="1 0 0 1" /> <!-- Red color -->
+    </material>
+  </visual>
+  <!-- Define the ball collision -->
+  <collision>
+    <origin xyz="-0.794951806922509 3.49 -5.5" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Same diameter as visual -->
+    </geometry>
+  </collision>
+  <!-- Define the ball inertia -->
+
+  <inertial>
+    <origin xyz="1.09038 0.847497 0.755788" /> <!-- Position of the ball -->
+    <mass value="0.325" /> <!-- Assuming the weight is 325 grams -->
+    <inertia ixx="0.004" ixy="0" ixz="0" iyy="0.004" iyz="0" izz="0.004" />
+    <!-- <inertia ixx="0.004" iyy="0.004" izz="0.004" /> Assuming spherical inertia -->
+  </inertial>
+  
+</link>
+
+
+
+
+<!-- Define the joint between the ball link and the base link -->
+<joint name="ball_joint3" type="fixed">
+  <!-- Specify the origin of the joint -->
+  <origin xyz="1.09038 0.847497 0.755788" />
+  <!-- Connect the ball link to the base link -->
+  <parent link="base_link"/>
+  <child link="ball3"/>
+</joint>
+
+
+
+
+
+<!-- Define the ball link -->
+<link name="ball3">
+  <!-- Define the ball visual -->
+  <visual>
+    <origin xyz="-0.794951806922509 3.68 -5.5" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Diameter: 190 mm / 2 = 0.095 meters -->
+    </geometry>
+    <material name="red"> <!-- Assuming red color -->
+      <color rgba="1 0 0 1" /> <!-- Red color -->
+    </material>
+  </visual>
+  <!-- Define the ball collision -->
+  <collision>
+    <origin xyz="-0.794951806922509 3.68 -5.5" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Same diameter as visual -->
+    </geometry>
+  </collision>
+  <!-- Define the ball inertia -->
+
+  <inertial>
+    <origin xyz="1.09038 0.847497 0.755788" /> <!-- Position of the ball -->
+    <mass value="0.325" /> <!-- Assuming the weight is 325 grams -->
+    <inertia ixx="0.004" ixy="0" ixz="0" iyy="0.004" iyz="0" izz="0.004" />
+    <!-- <inertia ixx="0.004" iyy="0.004" izz="0.004" /> Assuming spherical inertia -->
+  </inertial>
+  
+</link>
+
+
+
+<!-- Define the joint between the ball link and the base link -->
+<joint name="ball_joint4" type="fixed">
+  <!-- Specify the origin of the joint -->
+  <origin xyz="1.09038 0.847497 0.755788" />
+  <!-- Connect the ball link to the base link -->
+  <parent link="base_link"/>
+  <child link="ball4"/>
+</joint>
+
+
+
+
+
+
+<!-- Define the ball link -->
+<link name="ball4">
+  <!-- Define the ball visual -->
+  <visual>
+    <origin xyz="-0.794951806922509 3.87 -5.5" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Diameter: 190 mm / 2 = 0.095 meters -->
+    </geometry>
+    <material name="red"> <!-- Assuming red color -->
+      <color rgba="1 0 0 1" /> <!-- Red color -->
+    </material>
+  </visual>
+  <!-- Define the ball collision -->
+  <collision>
+    <origin xyz="-0.794951806922509 3.87 -5.5" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Same diameter as visual -->
+    </geometry>
+  </collision>
+  <!-- Define the ball inertia -->
+
+  <inertial>
+    <origin xyz="1.09038 0.847497 0.755788" /> <!-- Position of the ball -->
+    <mass value="0.325" /> <!-- Assuming the weight is 325 grams -->
+    <inertia ixx="0.004" ixy="0" ixz="0" iyy="0.004" iyz="0" izz="0.004" />
+    <!-- <inertia ixx="0.004" iyy="0.004" izz="0.004" /> Assuming spherical inertia -->
+  </inertial>
+  
+</link>
+
+
+
+
+<!-- Define the joint between the ball link and the base link -->
+<joint name="ball_joint5" type="fixed">
+  <!-- Specify the origin of the joint -->
+  <origin xyz="1.09038 0.847497 0.755788" />
+  <!-- Connect the ball link to the base link -->
+  <parent link="base_link"/>
+  <child link="ball5"/>
+</joint>
+
+<!-- Define the ball link -->
+<link name="ball5">
+  <!-- Define the ball visual -->
+  <visual>
+    <origin xyz="-0.794951806922509 3.87 -5.31" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Diameter: 190 mm / 2 = 0.095 meters -->
+    </geometry>
+    <material name="red"> <!-- Assuming red color -->
+      <color rgba="1 0 0 1" /> <!-- Red color -->
+    </material>
+  </visual>
+  <!-- Define the ball collision -->
+  <collision>
+    <origin xyz="-0.794951806922509 3.87 -5.31" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Same diameter as visual -->
+    </geometry>
+  </collision>
+  <!-- Define the ball inertia -->
+
+  <inertial>
+    <origin xyz="1.09038 0.847497 0.755788" /> <!-- Position of the ball -->
+    <mass value="0.325" /> <!-- Assuming the weight is 325 grams -->
+    <inertia ixx="0.004" ixy="0" ixz="0" iyy="0.004" iyz="0" izz="0.004" />
+    <!-- <inertia ixx="0.004" iyy="0.004" izz="0.004" /> Assuming spherical inertia -->
+  </inertial>
+  
+</link>
+
+
+
+
+<!-- Define the joint between the ball link and the base link -->
+<joint name="ball_joint6" type="fixed">
+  <!-- Specify the origin of the joint -->
+  <origin xyz="1.09038 0.847497 0.755788" />
+  <!-- Connect the ball link to the base link -->
+  <parent link="base_link"/>
+  <child link="ball6"/>
+</joint>
+
+<!-- Define the ball link -->
+<link name="ball6">
+  <!-- Define the ball visual -->
+  <visual>
+    <origin xyz="-0.794951806922509 3.87 -5.12" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Diameter: 190 mm / 2 = 0.095 meters -->
+    </geometry>
+    <material name="red"> <!-- Assuming red color -->
+      <color rgba="1 0 0 1" /> <!-- Red color -->
+    </material>
+  </visual>
+  <!-- Define the ball collision -->
+  <collision>
+    <origin xyz="-0.794951806922509 3.87 -5.12" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Same diameter as visual -->
+    </geometry>
+  </collision>
+  <!-- Define the ball inertia -->
+
+  <inertial>
+    <origin xyz="1.09038 0.847497 0.755788" /> <!-- Position of the ball -->
+    <mass value="0.325" /> <!-- Assuming the weight is 325 grams -->
+    <inertia ixx="0.004" ixy="0" ixz="0" iyy="0.004" iyz="0" izz="0.004" />
+    <!-- <inertia ixx="0.004" iyy="0.004" izz="0.004" /> Assuming spherical inertia -->
+  </inertial>
+  
+</link>
+
+
+
+<!-- Define the joint between the ball link and the base link -->
+<joint name="ball_joint7" type="fixed">
+  <!-- Specify the origin of the joint -->
+  <origin xyz="1.09038 0.847497 0.755788" />
+  <!-- Connect the ball link to the base link -->
+  <parent link="base_link"/>
+  <child link="ball7"/>
+</joint>
+
+<!-- Define the ball link -->
+<link name="ball7">
+  <!-- Define the ball visual -->
+  <visual>
+    <origin xyz="-0.794951806922509 3.87 -4.93" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Diameter: 190 mm / 2 = 0.095 meters -->
+    </geometry>
+    <material name="red"> <!-- Assuming red color -->
+      <color rgba="1 0 0 1" /> <!-- Red color -->
+    </material>
+  </visual>
+  <!-- Define the ball collision -->
+  <collision>
+    <origin xyz="-0.794951806922509 3.87 -4.93" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Same diameter as visual -->
+    </geometry>
+  </collision>
+  <!-- Define the ball inertia -->
+
+  <inertial>
+    <origin xyz="1.09038 0.847497 0.755788" /> <!-- Position of the ball -->
+    <mass value="0.325" /> <!-- Assuming the weight is 325 grams -->
+    <inertia ixx="0.004" ixy="0" ixz="0" iyy="0.004" iyz="0" izz="0.004" />
+    <!-- <inertia ixx="0.004" iyy="0.004" izz="0.004" /> Assuming spherical inertia -->
+  </inertial>
+  
+</link>
+
+
+
+<!-- Define the joint between the ball link and the base link -->
+<joint name="ball_joint8" type="fixed">
+  <!-- Specify the origin of the joint -->
+  <origin xyz="1.09038 0.847497 0.755788" />
+  <!-- Connect the ball link to the base link -->
+  <parent link="base_link"/>
+  <child link="ball8"/>
+</joint>
+
+<!-- Define the ball link -->
+<link name="ball8">
+  <!-- Define the ball visual -->
+  <visual>
+    <origin xyz="-0.794951806922509 3.3 -5.12" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Diameter: 190 mm / 2 = 0.095 meters -->
+    </geometry>
+    <material name="red"> <!-- Assuming red color -->
+      <color rgba="1 0 0 1" /> <!-- Red color -->
+    </material>
+  </visual>
+  <!-- Define the ball collision -->
+  <collision>
+    <origin xyz="-0.794951806922509 3.3 -5.12" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Same diameter as visual -->
+    </geometry>
+  </collision>
+  <!-- Define the ball inertia -->
+
+  <inertial>
+    <origin xyz="1.09038 0.847497 0.755788" /> <!-- Position of the ball -->
+    <mass value="0.325" /> <!-- Assuming the weight is 325 grams -->
+    <inertia ixx="0.004" ixy="0" ixz="0" iyy="0.004" iyz="0" izz="0.004" />
+    <!-- <inertia ixx="0.004" iyy="0.004" izz="0.004" /> Assuming spherical inertia -->
+  </inertial>
+  
+</link>
+
+
+
+
+
+<!-- Define the joint between the ball link and the base link -->
+<joint name="ball_joint9" type="fixed">
+  <!-- Specify the origin of the joint -->
+  <origin xyz="1.09038 0.847497 0.755788" />
+  <!-- Connect the ball link to the base link -->
+  <parent link="base_link"/>
+  <child link="ball9"/>
+</joint>
+
+<!-- Define the ball link -->
+<link name="ball9">
+  <!-- Define the ball visual -->
+  <visual>
+    <origin xyz="-0.794951806922509 3.3 -5.31" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Diameter: 190 mm / 2 = 0.095 meters -->
+    </geometry>
+    <material name="red"> <!-- Assuming red color -->
+      <color rgba="1 0 0 1" /> <!-- Red color -->
+    </material>
+  </visual>
+  <!-- Define the ball collision -->
+  <collision>
+    <origin xyz="-0.794951806922509 3.3 -5.31" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Same diameter as visual -->
+    </geometry>
+  </collision>
+  <!-- Define the ball inertia -->
+
+  <inertial>
+    <origin xyz="1.09038 0.847497 0.755788" /> <!-- Position of the ball -->
+    <mass value="0.325" /> <!-- Assuming the weight is 325 grams -->
+    <inertia ixx="0.004" ixy="0" ixz="0" iyy="0.004" iyz="0" izz="0.004" />
+    <!-- <inertia ixx="0.004" iyy="0.004" izz="0.004" /> Assuming spherical inertia -->
+  </inertial>
+  
+</link>
+
+
+
+<!-- Define the joint between the ball link and the base link -->
+<joint name="ball_joint10" type="fixed">
+  <!-- Specify the origin of the joint -->
+  <origin xyz="1.09038 0.847497 0.755788" />
+  <!-- Connect the ball link to the base link -->
+  <parent link="base_link"/>
+  <child link="ball10"/>
+</joint>
+
+<!-- Define the ball link -->
+<link name="ball10">
+  <!-- Define the ball visual -->
+  <visual>
+    <origin xyz="-0.794951806922509 3.3 -4.93" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Diameter: 190 mm / 2 = 0.095 meters -->
+    </geometry>
+    <material name="red"> <!-- Assuming red color -->
+      <color rgba="1 0 0 1" /> <!-- Red color -->
+    </material>
+  </visual>
+  <!-- Define the ball collision -->
+  <collision>
+    <origin xyz="-0.794951806922509 3.3 -4.93" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Same diameter as visual -->
+    </geometry>
+  </collision>
+  <!-- Define the ball inertia -->
+
+  <inertial>
+    <origin xyz="1.09038 0.847497 0.755788" /> <!-- Position of the ball -->
+    <mass value="0.325" /> <!-- Assuming the weight is 325 grams -->
+    <inertia ixx="0.004" ixy="0" ixz="0" iyy="0.004" iyz="0" izz="0.004" />
+    <!-- <inertia ixx="0.004" iyy="0.004" izz="0.004" /> Assuming spherical inertia -->
+  </inertial>
+  
+</link>
+
+
+
+
+<!-- Define the joint between the ball link and the base link -->
+<joint name="ball_joint11" type="fixed">
+  <!-- Specify the origin of the joint -->
+  <origin xyz="1.09038 0.847497 0.755788" />
+  <!-- Connect the ball link to the base link -->
+  <parent link="base_link"/>
+  <child link="ball11"/>
+</joint>
+
+<!-- Define the ball link -->
+<link name="ball11">
+  <!-- Define the ball visual -->
+  <visual>
+    <origin xyz="-0.794951806922509 3.49 -5.31" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Diameter: 190 mm / 2 = 0.095 meters -->
+    </geometry>
+    <material name="red"> <!-- Assuming red color -->
+      <color rgba="1 0 0 1" /> <!-- Red color -->
+    </material>
+  </visual>
+  <!-- Define the ball collision -->
+  <collision>
+    <origin xyz="-0.794951806922509 3.49 -5.31" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Same diameter as visual -->
+    </geometry>
+  </collision>
+  <!-- Define the ball inertia -->
+
+  <inertial>
+    <origin xyz="1.09038 0.847497 0.755788" /> <!-- Position of the ball -->
+    <mass value="0.325" /> <!-- Assuming the weight is 325 grams -->
+    <inertia ixx="0.004" ixy="0" ixz="0" iyy="0.004" iyz="0" izz="0.004" />
+    <!-- <inertia ixx="0.004" iyy="0.004" izz="0.004" /> Assuming spherical inertia -->
+  </inertial>
+  
+</link>
+
+
+
+
+
+  <!-- Define the joint between the ball link and the base link -->
+<joint name="ball_joint12" type="fixed">
+  <!-- Specify the origin of the joint -->
+  <origin xyz="1.09038 0.847497 0.755788" />
+  <!-- Connect the ball link to the base link -->
+  <parent link="base_link"/>
+  <child link="ball12"/>
+</joint>
+
+<!-- Define the ball link -->
+<link name="ball12">
+  <!-- Define the ball visual -->
+  <visual>
+    <origin xyz="-0.794951806922509 3.49 -5.12" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Diameter: 190 mm / 2 = 0.095 meters -->
+    </geometry>
+    <material name="red"> <!-- Assuming red color -->
+      <color rgba="1 0 0 1" /> <!-- Red color -->
+    </material>
+  </visual>
+  <!-- Define the ball collision -->
+  <collision>
+    <origin xyz="-0.794951806922509 3.49 -5.12" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Same diameter as visual -->
+    </geometry>
+  </collision>
+  <!-- Define the ball inertia -->
+
+  <inertial>
+    <origin xyz="1.09038 0.847497 0.755788" /> <!-- Position of the ball -->
+    <mass value="0.325" /> <!-- Assuming the weight is 325 grams -->
+    <inertia ixx="0.004" ixy="0" ixz="0" iyy="0.004" iyz="0" izz="0.004" />
+    <!-- <inertia ixx="0.004" iyy="0.004" izz="0.004" /> Assuming spherical inertia -->
+  </inertial>
+  
+</link>
+
+
+
+
+  <!-- Define the joint between the ball link and the base link -->
+<joint name="ball_joint13" type="fixed">
+  <!-- Specify the origin of the joint -->
+  <origin xyz="1.09038 0.847497 0.755788" />
+  <!-- Connect the ball link to the base link -->
+  <parent link="base_link"/>
+  <child link="ball13"/>
+</joint>
+
+<!-- Define the ball link -->
+<link name="ball13">
+  <!-- Define the ball visual -->
+  <visual>
+    <origin xyz="-0.794951806922509 3.49 -4.93" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Diameter: 190 mm / 2 = 0.095 meters -->
+    </geometry>
+    <material name="red"> <!-- Assuming red color -->
+      <color rgba="1 0 0 1" /> <!-- Red color -->
+    </material>
+  </visual>
+  <!-- Define the ball collision -->
+  <collision>
+    <origin xyz="-0.794951806922509 3.49 -4.93" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Same diameter as visual -->
+    </geometry>
+  </collision>
+  <!-- Define the ball inertia -->
+
+  <inertial>
+    <origin xyz="1.09038 0.847497 0.755788" /> <!-- Position of the ball -->
+    <mass value="0.325" /> <!-- Assuming the weight is 325 grams -->
+    <inertia ixx="0.004" ixy="0" ixz="0" iyy="0.004" iyz="0" izz="0.004" />
+    <!-- <inertia ixx="0.004" iyy="0.004" izz="0.004" /> Assuming spherical inertia -->
+  </inertial>
+  
+</link>
+
+
+
+
+  <!-- Define the joint between the ball link and the base link -->
+<joint name="ball_joint14" type="fixed">
+  <!-- Specify the origin of the joint -->
+  <origin xyz="1.09038 0.847497 0.755788" />
+  <!-- Connect the ball link to the base link -->
+  <parent link="base_link"/>
+  <child link="ball14"/>
+</joint>
+
+<!-- Define the ball link -->
+<link name="ball14">
+  <!-- Define the ball visual -->
+  <visual>
+    <origin xyz="-0.794951806922509 3.68 -5.31" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Diameter: 190 mm / 2 = 0.095 meters -->
+    </geometry>
+    <material name="red"> <!-- Assuming red color -->
+      <color rgba="1 0 0 1" /> <!-- Red color -->
+    </material>
+  </visual>
+  <!-- Define the ball collision -->
+  <collision>
+    <origin xyz="-0.794951806922509 3.68 -5.31" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Same diameter as visual -->
+    </geometry>
+  </collision>
+  <!-- Define the ball inertia -->
+
+  <inertial>
+    <origin xyz="1.09038 0.847497 0.755788" /> <!-- Position of the ball -->
+    <mass value="0.325" /> <!-- Assuming the weight is 325 grams -->
+    <inertia ixx="0.004" ixy="0" ixz="0" iyy="0.004" iyz="0" izz="0.004" />
+    <!-- <inertia ixx="0.004" iyy="0.004" izz="0.004" /> Assuming spherical inertia -->
+  </inertial>
+  
+</link>
+
+
+
+  <!-- Define the joint between the ball link and the base link -->
+<joint name="ball_joint15" type="fixed">
+  <!-- Specify the origin of the joint -->
+  <origin xyz="1.09038 0.847497 0.755788" />
+  <!-- Connect the ball link to the base link -->
+  <parent link="base_link"/>
+  <child link="ball15"/>
+</joint>
+
+<!-- Define the ball link -->
+<link name="ball15">
+  <!-- Define the ball visual -->
+  <visual>
+    <origin xyz="-0.794951806922509 3.68 -5.12" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Diameter: 190 mm / 2 = 0.095 meters -->
+    </geometry>
+    <material name="red"> <!-- Assuming red color -->
+      <color rgba="1 0 0 1" /> <!-- Red color -->
+    </material>
+  </visual>
+  <!-- Define the ball collision -->
+  <collision>
+    <origin xyz="-0.794951806922509 3.68 -5.12" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Same diameter as visual -->
+    </geometry>
+  </collision>
+  <!-- Define the ball inertia -->
+
+  <inertial>
+    <origin xyz="1.09038 0.847497 0.755788" /> <!-- Position of the ball -->
+    <mass value="0.325" /> <!-- Assuming the weight is 325 grams -->
+    <inertia ixx="0.004" ixy="0" ixz="0" iyy="0.004" iyz="0" izz="0.004" />
+    <!-- <inertia ixx="0.004" iyy="0.004" izz="0.004" /> Assuming spherical inertia -->
+  </inertial>
+  
+</link>
+
+
+
+
+  <!-- Define the joint between the ball link and the base link -->
+<joint name="ball_joint16" type="fixed">
+  <!-- Specify the origin of the joint -->
+  <origin xyz="1.09038 0.847497 0.755788" />
+  <!-- Connect the ball link to the base link -->
+  <parent link="base_link"/>
+  <child link="ball16"/>
+</joint>
+
+<!-- Define the ball link -->
+<link name="ball16">
+  <!-- Define the ball visual -->
+  <visual>
+    <origin xyz="-0.794951806922509 3.68 -4.93" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Diameter: 190 mm / 2 = 0.095 meters -->
+    </geometry>
+    <material name="red"> <!-- Assuming red color -->
+      <color rgba="1 0 0 1" /> <!-- Red color -->
+    </material>
+  </visual>
+  <!-- Define the ball collision -->
+  <collision>
+    <origin xyz="-0.794951806922509 3.68 -4.93" /> <!-- Position of the ball -->
+    <geometry>
+      <sphere radius="0.095" /> <!-- Same diameter as visual -->
+    </geometry>
+  </collision>
+  <!-- Define the ball inertia -->
+
+  <inertial>
+    <origin xyz="1.09038 0.847497 0.755788" /> <!-- Position of the ball -->
+    <mass value="0.325" /> <!-- Assuming the weight is 325 grams -->
+    <inertia ixx="0.004" ixy="0" ixz="0" iyy="0.004" iyz="0" izz="0.004" />
+    <!-- <inertia ixx="0.004" iyy="0.004" izz="0.004" /> Assuming spherical inertia -->
+  </inertial>
+  
+</link>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <joint
+    name="j3"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  
+  <link
+    name="l4">
+    <inertial>
+      <origin
+        xyz="0.15000000000002 5.65348965782814 0.499999999999996"
+        rpy="0 0 0" />
+      <mass
+        value="45.445" />
+      <inertia
+        ixx="1.50659179166667"
+        ixy="-2.21986089970393E-15"
+        ixz="6.72552291638488E-19"
+        iyy="0.870558447916665"
+        iyz="6.6657136325138E-16"
+        izz="0.711775010416668" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.956862745098039 0.211764705882353 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j4"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="l5">
+    <inertial>
+      <origin
+        xyz="0.151971846644957 2.68798311898064 0.235002116540766"
+        rpy="0 0 0" />
+      <mass
+        value="1995.50051543245" />
+      <inertia
+        ixx="7454.16456689752"
+        ixy="3.61353217197107"
+        ixz="7.71862188418717"
+        iyy="2228.96673622696"
+        iyz="-588.307413634482"
+        izz="5229.1504182607" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.313725490196078 0.619607843137255 0.184313725490196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j5"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l5" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="l6">
+    <inertial>
+      <origin
+        xyz="0.15 4.99830923496937E-16 -4.00000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="1777.13238357633" />
+      <inertia
+        ixx="3152.52481992549"
+        ixy="-2.60230486480174E-12"
+        ixz="-1.35336531657938E-13"
+        iyy="2399.27274412368"
+        iyz="3.13848131233329E-15"
+        izz="756.213963107772" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j6"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l6" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="l7">
+    <inertial>
+      <origin
+        xyz="0.194951806922509 4.57759056324013E-16 -4"
+        rpy="0 0 0" />
+      <mass
+        value="5242.8" />
+      <inertia
+        ixx="3281.52788895581"
+        ixy="-7.28171102113052E-12"
+        ixz="-1.18522342774187E-12"
+        iyy="1179.43981475832"
+        iyz="-326.159389444807"
+        izz="2135.26666906355" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j7"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l7" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="l8">
+    <inertial>
+      <origin
+        xyz="0.349999999999986 1.52101302779328E-15 -4"
+        rpy="0 0 0" />
+      <mass
+        value="100" />
+      <inertia
+        ixx="133.854166666667"
+        ixy="1.02864225841066E-17"
+        ixz="-4.63784928371147E-13"
+        iyy="133.416666666667"
+        iyz="2.59906765909552E-16"
+        izz="0.604166666666667" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j8"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l8" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="l9">
+    <inertial>
+      <origin
+        xyz="0.25 -1.11032017197771E-13 -3.73318505338078"
+        rpy="0 0 0" />
+      <mass
+        value="421.500000000006" />
+      <inertia
+        ixx="13880.945824066"
+        ixy="-3.76898926246574E-11"
+        ixz="2.66280382810366E-13"
+        iyy="2957.4558240659"
+        iyz="8.36321917215407E-11"
+        izz="10929.8125000001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l9.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l9.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j9"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l9" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="l10">
+    <inertial>
+      <origin
+        xyz="0.612586366803305 5.62442734976455E-05 -3.99993166685058"
+        rpy="0 0 0" />
+      <mass
+        value="1.38757839228589" />
+      <inertia
+        ixx="0.0217096826794302"
+        ixy="3.63568501315003E-07"
+        ixz="1.52145157983886E-05"
+        iyy="0.0391422560714641"
+        iyz="-2.09520982875488E-05"
+        izz="0.0391488376203219" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l10.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l10.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j10"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l10" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="l1">
+    <inertial>
+      <origin
+        xyz="0.133333333333353 5.5 2.33333333333333"
+        rpy="0 0 0" />
+      <mass
+        value="48.5" />
+      <inertia
+        ixx="3.64514548611112"
+        ixy="-3.24075138933781E-15"
+        ixz="0.134722222222222"
+        iyy="2.72138888888889"
+        iyz="-5.87835360168963E-16"
+        izz="0.977645486111113" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j1"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="l2">
+    <inertial>
+      <origin
+        xyz="0.151971846644957 2.68798311898064 0.235002116540766"
+        rpy="0 0 0" />
+      <mass
+        value="1995.50051543245" />
+      <inertia
+        ixx="7454.16456689752"
+        ixy="3.61353217197111"
+        ixz="7.71862188418716"
+        iyy="2228.96673622696"
+        iyz="-588.307413634482"
+        izz="5229.1504182607" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.313725490196078 0.619607843137255 0.184313725490196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j2"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="l11">
+    <inertial>
+      <origin
+        xyz="6.57747506040163 3.21207283491756 14.67061004472"
+        rpy="0 0 0" />
+      <mass
+        value="0.674289342514414" />
+      <inertia
+        ixx="0.000318951116704214"
+        ixy="1.72297421572013E-17"
+        ixz="6.80875126095148E-20"
+        iyy="0.0052597300011439"
+        iyz="-2.44631217259478E-21"
+        izz="0.0052597300011439" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://areaurdf_noarea1/meshes/l11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j11"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l11" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  
+
+</robot>
